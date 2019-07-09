@@ -1,0 +1,64 @@
+What is shell
+$ implies ready for input
+
+whoami == user
+pwd = present workign directory
+
+in linux, everything is under one file system
+ls -F == distingusih file and folder
+ls --help == <command> --help 
+man <command>
+
+.. == one directory above
+... == 2 directories above
+
+found in all folders
+./
+../
+
+Auto completion == Tab
+~ == Home directory
+- == return to previous location
+
+-h -l or -s : human readble file sizes
+-hs == combine options
+
+nano == file editor
+ctrl x == exit
+ctrl o == save
+
+history == recorded commands, repeat commands 
+cat <file> == output file contents to shell
+
+head tail = start end of file
+
+* == zero or more characters
+? == exacly one char
+
+wc == num of lines, words, characters
+wc -l == only line number
+
+grep == search thru contents of the file
+
+| == output of one command goes to the next command
+
+
+#Script files
+
+#!/bin/bash == top of file, helps linux identify which type of file it is
+
+chmod == change permissions for user, group, others
+
+. == sorts file; run command in current shell as compared to ./
+#generally used for configuration, used to steup system variables
+
+
+$1 == input file name to shell script
+$* == input all file names given to shell script
+
+var=command == store command to var
+var=$(command) == store output of caommand to var
+
+$* takes ouput of input arguments while running shell script
+
+PATH == environment variable that stores locations for executables

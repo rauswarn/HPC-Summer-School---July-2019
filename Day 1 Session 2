@@ -1,0 +1,32 @@
+{\rtf1}
+
+
+Clusters
+
+#Configuring modules in the cluster
+
+module load <module_name> == loads module w/ version
+moduel avail <mod_name> == find if module available
+
+
+##Shell script for the job
+
+
+#fastqc_job.sh
+###------------
+#!/bin/bash
+#SBATCH --account=def-training-wa
+#SBATCH --reservation=cosse19-wr_cpu
+#SBATCH --t 00:10:00
+#SBATCH --mem-per-cpu 500m
+
+fastqc $1
+
+###------------
+
+#submit the job
+sbatch fastqc_job.sh SRR307026_2.fastq
+
+
+#Check running jobs
+squeue -u guest181
